@@ -1,0 +1,171 @@
+.involvement-card {
+     padding: 2rem;
+     border-radius: 15px;
+     height: 100%;
+     transition: transform 0.3s ease;
+   }
+
+   .involvement-card:hover {
+     transform: translateY(-5px);
+   }
+
+   .primary-card {
+     background: linear-gradient(
+       135deg,
+       var(--primary-color),
+       var(--secondary-color)
+     );
+     color: white;
+   }
+
+   .secondary-card {
+     background: white;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+   }
+
+   .donation-tiers {
+     display: flex;
+     gap: 1rem;
+     flex-wrap: wrap;
+     margin: 1.5rem 0;
+   }
+
+   .tier-btn {
+     padding: 0.5rem 1.5rem;
+     border: 2px solid white;
+     border-radius: 25px;
+     background: transparent;
+     color: white;
+     cursor: pointer;
+     transition: all 0.3s ease;
+   }
+
+   .tier-btn.active {
+     background: white;
+     color: var(--primary-color);
+   }
+
+   .custom-amount {
+     padding: 0.5rem 1rem;
+     border: 2px solid white;
+     border-radius: 25px;
+     background: transparent;
+     color: white;
+     width: 150px;
+   }
+
+   .network-options {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 1rem;
+     margin: 2rem 0;
+   }
+
+   .option {
+     text-align: center;
+   }
+
+   .option i {
+     font-size: 2rem;
+     color: var(--primary-color);
+     margin-bottom: 1rem;
+   }
+
+   /* Impact Calculator Styles */
+   .impact-calculator {
+     background: white;
+     padding: 2rem;
+     border-radius: 15px;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+   }
+
+   .impact-range {
+     width: 100%;
+     margin: 1rem 0;
+   }
+
+   .range-values {
+     display: flex;
+     justify-content: space-between;
+     color: #666;
+   }
+
+   .impact-results {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 1rem;
+     text-align: center;
+   }
+
+   .result-item {
+     padding: 1rem;
+   }
+
+   .result-number {
+     display: block;
+     font-size: 2rem;
+     font-weight: bold;
+     color: var(--primary-color);
+   }
+
+   /* Footer Styles */
+   .footer-section {
+     background: var(--secondary-color);
+     color: white;
+   }
+
+   .footer-top {
+     background: rgba(0, 0, 0, 0.1);
+   }
+
+   .social-links {
+     margin-top: 1.5rem;
+   }
+
+   .social-links a {
+     display: inline-block;
+     width: 35px;
+     height: 35px;
+     background: rgba(255, 255, 255, 0.1);
+     border-radius: 50%;
+     text-align: center;
+     line-height: 35px;
+     color: white;
+     margin-right: 0.5rem;
+     transition: all 0.3s ease;
+   }
+
+   .social-links a:hover {
+     background: var(--primary-color);
+     transform: translateY(-3px);
+   }
+
+   .footer-links {
+     list-style: none;
+     padding: 0;
+   }
+
+   .footer-links li {
+     margin-bottom: 0.8rem;
+   }
+
+   .footer-links a {
+     color: rgba(255, 255, 255, 0.8);
+     text-decoration: none;
+     transition: all 0.3s ease;
+   }
+
+   .footer-links a:hover {
+     color: white;
+     padding-left: 5px;
+   }
+
+   .footer-bottom {
+     background: rgba(0, 0, 0, 0.2);
+   }
+
+   .footer-bottom a {
+     color: white;
+     text-decoration: none;
+     margin-left: 1.5rem;
+   }

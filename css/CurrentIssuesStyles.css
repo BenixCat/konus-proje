@@ -1,0 +1,184 @@
+.issue-card {
+     background: white;
+     border-radius: 15px;
+     overflow: hidden;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease;
+   }
+
+   .issue-card:hover {
+     transform: translateY(-5px);
+   }
+
+   .issue-image {
+     position: relative;
+     height: 200px;
+     overflow: hidden;
+   }
+
+   .issue-image img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     transition: transform 0.3s ease;
+   }
+
+   .issue-card:hover .issue-image img {
+     transform: scale(1.1);
+   }
+
+   .urgency-badge {
+     position: absolute;
+     top: 15px;
+     right: 15px;
+     padding: 5px 15px;
+     border-radius: 20px;
+     background: var(--primary-color);
+     color: white;
+     font-size: 0.8rem;
+     font-weight: 600;
+   }
+
+   .issue-content {
+     padding: 1.5rem;
+   }
+
+   /* World Map Styles */
+   .map-container {
+     height: 600px;
+     background: #1a2634;
+     border-radius: 15px;
+     overflow: hidden;
+     position: relative;
+   }
+
+   #world-map {
+     height: 100%;
+     filter: brightness(0.8) saturate(1.2);
+   }
+
+   .crisis-point {
+     position: absolute;
+     z-index: 2;
+   }
+
+   .crisis-card {
+     position: absolute;
+     width: 300px;
+     background: white;
+     border-radius: 10px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+     opacity: 0;
+     transform: translateY(20px);
+     transition: all 0.3s ease;
+     pointer-events: none;
+   }
+
+   .crisis-point:hover .crisis-card {
+     opacity: 1;
+     transform: translateY(0);
+     pointer-events: all;
+   }
+
+   .pulse {
+     width: 20px;
+     height: 20px;
+     background: var(--primary-color);
+     border-radius: 50%;
+     position: relative;
+     cursor: pointer;
+   }
+
+   .pulse::after {
+     content: "";
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background: var(--primary-color);
+     border-radius: 50%;
+     animation: pulse 2s infinite;
+   }
+
+   @keyframes pulse {
+     0% {
+       transform: scale(1);
+       opacity: 1;
+     }
+     100% {
+       transform: scale(3);
+       opacity: 0;
+     }
+   }
+
+   /* News Section Styles */
+   .news-section .card {
+     transition: transform 0.3s ease;
+   }
+
+   .news-section .card:hover {
+     transform: translateY(-5px);
+   }
+
+   .header-line {
+     width: 50px;
+     height: 3px;
+     background: var(--primary-color);
+     margin: 1rem auto;
+   }
+
+   .meta-info span {
+     font-size: 0.9rem;
+     color: #666;
+   }
+
+   .news-list li {
+     padding: 10px 0;
+     border-bottom: 1px solid #eee;
+   }
+
+   .news-list li:last-child {
+     border-bottom: none;
+   }
+
+   /* Freedom Stories Styles */
+   .animated-card {
+     position: relative;
+     overflow: hidden;
+     transform: translateY(50px);
+     opacity: 0;
+     animation: fadeInUp 0.6s forwards;
+   }
+
+   .illustration-overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.4);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+
+   .story-tag {
+     background: var(--primary-color);
+     color: white;
+     padding: 4px 12px;
+     border-radius: 20px;
+     font-size: 0.8rem;
+     margin-bottom: 1rem;
+     display: inline-block;
+   }
+
+   /* Additional Animations */
+   @keyframes fadeInUp {
+     from {
+       opacity: 0;
+       transform: translateY(50px);
+     }
+     to {
+       opacity: 1;
+       transform: translateY(0);
+     }
+   }

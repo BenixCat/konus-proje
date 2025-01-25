@@ -1,0 +1,317 @@
+:root {
+     --primary-color: #e63946;
+     --secondary-color: #1d3557;
+     --accent-color: #457b9d;
+     --light-color: #f1faee;
+     --dark-color: #2b2d42;
+   }
+
+   body {
+     font-family: "Poppins", sans-serif;
+     line-height: 1.6;
+     color: var(--dark-color);
+   }
+
+
+
+   .mb-sm {
+     margin-bottom: 3rem;
+   }
+   /* Navigation Styles */
+   .navbar {
+     background-color: rgba(29, 53, 87, 0.98) !important;
+     padding: 0rem 0 1rem 0;
+     transition: all 0.3s ease;
+   }
+   .navbar-nav {
+     align-items: center;
+   }
+   .navbar-brand {
+     font-size: 1.8rem;
+     font-weight: 700;
+     color: var(--light-color) !important;
+   }
+
+   .nav-link {
+     color: var(--light-color) !important;
+     font-weight: 500;
+     margin: 0 10px;
+     position: relative;
+   }
+
+   .nav-link::after {
+     content: "";
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 0;
+     height: 2px;
+     background-color: var(--primary-color);
+     transition: width 0.3s ease;
+   }
+
+   .nav-link:hover::after {
+     width: 100%;
+   }
+
+   /* Emergency Banner */
+   .emergency-banner {
+     background-color: var(--primary-color);
+     color: white;
+     width: 100%;
+     padding: 0.5rem 0;
+     position: relative;
+     overflow: hidden;
+   }
+
+   /* .emergency-banner::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 200%;
+     
+     height: 100%;
+     background: linear-gradient(
+       90deg,
+       transparent,
+       rgba(255, 255, 255, 0.2),
+       transparent
+     );
+     animation: shine 3s infinite;
+   } */
+
+   @keyframes shine {
+     to {
+       left: 100%;
+     }
+   }
+
+   /* Hero Section */
+   .hero-section {
+     height: 102vh;
+     position: relative;
+     overflow: hidden;
+     background: linear-gradient(
+         rgba(29, 53, 87, 0.8),
+         rgba(29, 53, 87, 0.8)
+       ),
+       url("https://source.unsplash.com/random/1920x1080/?human-rights")
+         center/cover;
+        }
+
+   .hero-content {
+     display: flex;
+     flex-direction: column;
+     align-items: center; /* Yatayda ortalar */
+     justify-content: center; /* Dikeyde ortalar */
+     height: 100vh; /* Tüm ekran yüksekliğini kaplar */
+     transform: translate(0, -5%);
+     text-align: center; /* Metinleri ortalar */
+     color: white;
+   }
+
+   .hero-title {
+     font-size: 3.5rem;
+     font-weight: 700;
+     margin-bottom: 2rem;
+     opacity: 85%;
+     /* animation: fadeInUp 1s ease; */
+   }
+
+   .hero-subtitle {
+     font-size: 1.8rem;
+     margin-bottom: 3rem;
+     
+     opacity: 95%;
+     /* animation: fadeInUp 1s ease 0.3s; */
+     /* animation-fill-mode: both; */
+   }
+
+   .hero-buttons {
+     /* animation: fadeInUp 1s ease 0.6s; */
+     /* animation-fill-mode: both; */
+   }
+
+   .btn-primary {
+     background-color: var(--primary-color);
+     border: none;
+     padding: 1rem 2rem;
+     font-weight: 600;
+     border-radius: 30px;
+     transition: transform 0.3s ease;
+   }
+
+   .btn-primary:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+   }
+
+   .btn-outline-light {
+     border: 2px solid white;
+     padding: 1rem 2rem;
+     font-weight: 600;
+     border-radius: 30px;
+     transition: all 0.3s ease;
+   }
+
+   .btn-outline-light:hover {
+     background-color: white;
+     color: var(--primary-color);
+   }
+
+   /* Statistics Strip */
+   .stats-strip {
+     background-color: var(--secondary-color);
+     color: white;
+     padding: 2rem 0;
+     margin-top: -5rem;
+     position: relative;
+     z-index: 3;
+     border-radius: 10px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   }
+
+   .stat-item {
+     text-align: center;
+     padding: 1rem;
+   }
+
+   .stat-number {
+     font-size: 2.5rem;
+     font-weight: 700;
+     margin-bottom: 0.5rem;
+     color: var(--primary-color);
+   }
+
+   .stat-label {
+     font-size: 1rem;
+     opacity: 0.9;
+   }
+
+   @keyframes fadeInUp {
+     from {
+       opacity: 0;
+       transform: translateY(30px);
+     }
+     to {
+       opacity: 1;
+       transform: translateY(0);
+     }
+   }
+
+   .freedom-overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: #000;
+     z-index: 9999;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: opacity 1.2s ease-in-out;
+   }
+
+   .freedom-photo-example{ 
+     width: 100%; /* Genişlik */
+    height: 699px; /* Yükseklik */
+    background-image: url('../D_0_GLOBAL.png'); /* Resim URL'si */
+    background-size: cover; /* Resmi kutuya sığdırır (cover veya contain kullanabilirsiniz) */
+    background-position: center; /* Resmi ortalar */
+    background-repeat: no-repeat; /* Tekrar etmez */
+    z-index: 1000;
+    }
+
+
+
+    .to-index-map:hover{
+      background-color: #cf333f;
+    }
+
+   .overlay-content {
+     text-align: center;
+     color: white;
+   }
+
+   .fade-in {
+     opacity: 0;
+     animation: fadeIn 1.4s forwards 0.7s;
+   }
+
+   .fade-in-delay {
+     opacity: 0;
+     animation: fadeIn 1.7s forwards 1.7s;
+   }
+
+   .continue-btn {
+     padding: 12px 30px;
+     background: transparent;
+     border: 2px solid white;
+     color: white;
+     border-radius: 30px;
+     margin-top: 20px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     opacity: 0;
+     animation: fadeIn 2s forwards 1.5s;
+   }
+
+   .continue-btn:hover {
+     background: white;
+     color: black;
+   }
+
+   .chains {
+     margin-bottom: 2rem;
+   }
+
+   .chain-svg {
+     width: 200px;
+     height: 100px;
+   }
+
+   .chain-link {
+     fill: none;
+     stroke: white;
+     stroke-width: 4;
+     stroke-dasharray: 200;
+     stroke-dashoffset: 200;
+     animation: drawChain 2s forwards, breakChain 1s 2s forwards,
+       hideChain 0s 3s forwards;
+   }
+
+   @keyframes fadeIn {
+     from {
+       opacity: 0;
+     }
+     to {
+       opacity: 1;
+     }
+   }
+
+   @keyframes drawChain {
+     to {
+       stroke-dashoffset: 0;
+     }
+   }
+
+   @keyframes breakChain {
+     to {
+       stroke-dasharray: 20 180;
+     }
+   }
+
+   /* Zinciri tamamen gizler ve display: none yapar */
+   @keyframes hideChain {
+     to {
+       opacity: 0;
+       display: none; /* Alanı tamamen kaldırır */
+     }
+   }
+
+
+   .mb-7 {
+    margin-bottom: 7rem;
+  }
