@@ -1,0 +1,108 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.about-us-img {
+     width: 100%;
+     height: 98vh;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-image: linear-gradient(
+         rgba(0, 0, 0, 0.2),
+         rgba(0, 0, 0, 0.4),
+         rgba(0, 0, 0, 0.7)
+       ),
+       url("assets/img/about-us.png");
+     display: flex;
+     justify-content: center;
+   }
+
+   .main-title {
+     color: white;
+     font-size: 3rem;
+     font-weight: bold;
+     display: inline-block;
+     align-self: center;
+   }
+
+   .about-us {
+     display: flex;
+     justify-content: space-between;
+   }
+   .text-us {
+     font-size: 1.2rem;
+     letter-spacing: 1.28px;
+     max-width: 800px;
+   }
+/* Genel Footer Stili */
+.footer {
+position: relative;
+background-color: #000; /* Siyah footer */
+color: white;
+text-align: center;
+padding: 20px 10px;
+font-size: 14px;
+overflow: hidden; /* Taşmaları gizle */
+}
+
+/* Dinamik Işık Çizgisi */
+.footer-light {
+position: absolute;
+top: 0;
+left: -150%; /* Animasyon başlangıcı */
+width: 150%;
+height: 10px; /* Çizginin kalınlığı */
+background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+animation: slide-light 2s infinite linear;
+}
+
+/* Footer İçeriği */
+.footer-content {
+position: relative;
+z-index: 1; /* Işık animasyonunun altında kalmaması için */
+}
+
+/* Işık Animasyonu */
+@keyframes slide-light {
+0% {
+   left: -150%;
+}
+100% {
+   left: 100%;
+}
+}
+
+/* Footer İçindeki Linkler */
+.footer-content a {
+color: #f1c40f; /* Altın sarısı linkler */
+text-decoration: none;
+}
+
+.footer-content a:hover {
+text-decoration: underline;
+color: #ffffff; /* Üzerine gelindiğinde beyaz */
+}
+
+
+/* General Animation */
+@keyframes appear {
+     from {
+       opacity: 0;
+       scale: 0.5;
+     }
+     to {
+       opacity: 1;
+       scale: 1;
+     }
+   }
+
+   .block-animation {
+     animation: appear linear;
+     animation-timeline: view();
+     animation-range: entry 0% cover 25%;
+   }
+
+

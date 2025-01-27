@@ -1,9 +1,9 @@
 :root {
-     --primary-color: #e63946;
-     --secondary-color: #1d3557;
-     --accent-color: #457b9d;
-     --light-color: #f1faee;
-     --dark-color: #2b2d42;
+  --primary-color: #e63946;
+  --secondary-color: #1d3557;
+  --accent-color: #457b9d;
+  --light-color: #f1faee;
+  --dark-color: #2b2d42;
    }
 
    body {
@@ -133,7 +133,7 @@
      /* animation-fill-mode: both; */
    }
 
-   .btn-primary {
+   .btn-danger {
      background-color: var(--primary-color);
      border: none;
      padding: 1rem 2rem;
@@ -142,7 +142,7 @@
      transition: transform 0.3s ease;
    }
 
-   .btn-primary:hover {
+   .btn-danger:hover {
      transform: translateY(-3px);
      box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
    }

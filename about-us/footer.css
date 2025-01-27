@@ -1,0 +1,113 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+
+   body {
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-end;
+     min-height: 100vh;
+   }
+   footer {
+     position: relative;
+     width: 100%;
+     background-color: #000;
+     color: white;
+     min-height: 100px;
+     padding: 20px 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     overflow: hidden;
+   }
+   footer .social-icon,
+   footer .menu {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 10px 0;
+     flex-wrap: wrap;
+   }
+
+   footer .social-icon li,
+   footer .menu li {
+     list-style: none;
+   }
+
+   footer .social-icon li a {
+     font-size: 2rem;
+     color: #fff;
+     margin: 0 10px;
+     display: inline-block;
+     transition: 0.5s;
+   }
+   footer .social-icon li a:hover {
+     transform: translate(-10px);
+
+     transform: scale(1.2);
+   }
+   footer .menu li a {
+     font-size: 1.2rem;
+     color: #fff;
+     margin: 0 10px;
+     display: inline-block;
+     transition: 0.5s;
+     text-decoration: none;
+     opacity: 0.7;
+   }
+
+   footer .menu li a:hover {
+     opacity: 1;
+   }
+   footer p {
+     color: #fff;
+     text-align: center;
+     margin-top: 15px;
+     margin-bottom: 10px;
+   }
+   /* Dinamik Işık Çizgisi */
+   .footer-light {
+     position: absolute;
+     top: 0;
+     left: -150%; /* Animasyon başlangıcı */
+     width: 150%;
+     height: 10px; /* Çizginin kalınlığı */
+     background: linear-gradient(
+       90deg,
+       rgba(255, 255, 255, 0) 0%,
+       rgba(255, 255, 255, 0.5) 50%,
+       rgba(255, 255, 255, 0) 100%
+     );
+     animation: slide-light 2s infinite linear;
+   }
+
+   /* Footer İçeriği */
+   .footer-content {
+     position: relative;
+     z-index: 1; /* Işık animasyonunun altında kalmaması için */
+   }
+
+   /* Işık Animasyonu */
+   @keyframes slide-light {
+     0% {
+       left: -150%;
+     }
+     100% {
+       left: 100%;
+     }
+   }
+
+   /* Footer İçindeki Linkler */
+   .footer-content a {
+     color: #f1c40f; /* Altın sarısı linkler */
+     text-decoration: none;
+   }
+
+   .footer-content a:hover {
+     text-decoration: underline;
+     color: #ffffff; /* Üzerine gelindiğinde beyaz */
+   }
