@@ -100,14 +100,3 @@
        left: 100%;
      }
    }
-
-   /* Footer İçindeki Linkler */
-   .footer-content a {
-     color: #f1c40f; /* Altın sarısı linkler */
-     text-decoration: none;
-   }
-
-   .footer-content a:hover {
-     text-decoration: underline;
-     color: #ffffff; /* Üzerine gelindiğinde beyaz */
-   }

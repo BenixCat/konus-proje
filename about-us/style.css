@@ -28,7 +28,7 @@
      align-self: center;
    }
 
-   .about-us {
+   .dp-flex-spc-btw {
      display: flex;
      justify-content: space-between;
    }
@@ -37,54 +37,6 @@
      letter-spacing: 1.28px;
      max-width: 800px;
    }
-/* Genel Footer Stili */
-.footer {
-position: relative;
-background-color: #000; /* Siyah footer */
-color: white;
-text-align: center;
-padding: 20px 10px;
-font-size: 14px;
-overflow: hidden; /* Taşmaları gizle */
-}
-
-/* Dinamik Işık Çizgisi */
-.footer-light {
-position: absolute;
-top: 0;
-left: -150%; /* Animasyon başlangıcı */
-width: 150%;
-height: 10px; /* Çizginin kalınlığı */
-background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
-animation: slide-light 2s infinite linear;
-}
-
-/* Footer İçeriği */
-.footer-content {
-position: relative;
-z-index: 1; /* Işık animasyonunun altında kalmaması için */
-}
-
-/* Işık Animasyonu */
-@keyframes slide-light {
-0% {
-   left: -150%;
-}
-100% {
-   left: 100%;
-}
-}
-
-/* Footer İçindeki Linkler */
-.footer-content a {
-color: #f1c40f; /* Altın sarısı linkler */
-text-decoration: none;
-}
-
-.footer-content a:hover {
-text-decoration: underline;
-color: #ffffff; /* Üzerine gelindiğinde beyaz */
-}
 
 
 /* General Animation */
